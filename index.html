@@ -286,7 +286,7 @@ body{background:var(--bg);color:var(--white);font-family:'IBM Plex Mono',monospa
     <div class="group-label">Reviews System</div>
     <button class="screen-btn" onclick="show(18)"><span class="sb-num">19</span><span class="sb-name">Post-Round Review</span><span class="sb-dot dot-amber"></span></button>
     <button class="screen-btn" onclick="show(19)"><span class="sb-num">20</span><span class="sb-name">Profile + Reviews</span><span class="sb-dot dot-green"></span></button>
-    <button class="screen-btn" onclick="show(20)"><span class="sb-num">21</span><span class="sb-name">Join Request + Reviews</span><span class="sb-dot dot-amber"></span></button>
+
 
   </div>
 </div>
@@ -1206,102 +1206,6 @@ const screens = [
       </div>
     </div>`
   },
-  // 20: JOIN REQUEST + REVIEW PREVIEW
-  {
-    title: "Incoming Join Request",
-    desc: "When someone requests to join your round · their reviews shown inline so you can accept or decline with full context",
-    html: `<div class="app">
-      <div class="status-bar"><span class="status-time">9:41</span><div class="status-icons">▌▌▌ ▾ ▮</div></div>
-      <div class="page-header"><span class="ph-back">‹</span><span class="ph-title">Round Request</span><span></span></div>
-      <div style="padding:0 18px 16px;font-size:10px;color:#888;">Someone wants to join your round at <strong style="color:var(--white);">Pinehill Golf Club · Tue 3 April</strong></div>
-      <div style="margin:0 18px 16px;background:#1a1a1a;border:1px solid var(--border);border-radius:12px;overflow:hidden;">
-        <div style="height:90px;background:linear-gradient(135deg,#0a1f04,#1a3a08);display:flex;align-items:center;justify-content:center;font-size:40px;position:relative;">
-          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(26,26,26,1) 0%,transparent 60%);"></div>
-          <div style="position:relative;z-index:1;display:flex;align-items:flex-end;gap:14px;padding:0 16px 14px;width:100%;">
-            <div class="player-av" style="background:none;padding:0;width:52px;height:52px;overflow:hidden;flex-shrink:0;position:relative;"><img src="https://randomuser.me/api/portraits/men/55.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" /></div>
-            <div>
-              <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;">Tom W.</div>
-              <div style="display:flex;align-items:center;gap:6px;margin-top:2px;">
-                <span style="color:#e8a85b;font-size:12px;">★★★★</span><span style="color:#555;font-size:12px;">★</span>
-                <span style="font-size:10px;color:#888;">4.1 · 9 reviews</span>
-                <span style="font-size:9px;color:var(--green);background:rgba(184,242,106,0.1);padding:2px 7px;border-radius:3px;">HI 15.6</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style="padding:14px 16px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;border-bottom:1px solid var(--border);">
-          <div style="text-align:center;"><div style="font-size:11px;font-weight:600;">1.4km</div><div style="font-size:8px;color:var(--mid);">away</div></div>
-          <div style="text-align:center;border-left:1px solid var(--border);border-right:1px solid var(--border);"><div style="font-size:11px;font-weight:600;">42</div><div style="font-size:8px;color:var(--mid);">rounds</div></div>
-          <div style="text-align:center;"><div style="font-size:11px;font-weight:600;">3 clubs</div><div style="font-size:8px;color:var(--mid);">member</div></div>
-        </div>
-        <div style="padding:14px 16px;border-bottom:1px solid var(--border);">
-          <div style="font-size:8px;color:var(--mid);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:8px;">What others say</div>
-          <div style="margin-bottom:8px;padding:10px 12px;background:rgba(255,255,255,0.03);border-radius:8px;border-left:2px solid var(--green);">
-            <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:10px;color:var(--white);">Sarah K.</span><span style="color:#e8a85b;font-size:10px;">★★★★★</span></div>
-            <div style="font-size:9px;color:#888;line-height:1.6;">"Really good player, very friendly and kept great pace throughout."</div>
-          </div>
-          <div style="padding:10px 12px;background:rgba(255,255,255,0.03);border-radius:8px;border-left:2px solid #e8a85b;">
-            <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:10px;color:var(--white);">Mark D.</span><span style="color:#e8a85b;font-size:10px;">★★★★<span style="color:#555;">★</span></span></div>
-            <div style="font-size:9px;color:#888;line-height:1.6;">"Good round. Solid golfer, turned up on time, no complaints."</div>
-          </div>
-        </div>
-        <div style="padding:14px 16px;">
-          <div style="font-size:8px;color:var(--mid);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:8px;">Tom's message</div>
-          <div style="font-size:11px;color:#888;line-height:1.7;font-style:italic;">"Hey! Spotted you've got a spot open at Pinehill on Tuesday — I'm a regular there and would love to join if there's still room."</div>
-        </div>
-      </div>
-      <div style="padding:0 18px;display:flex;gap:10px;padding-bottom:24px;">
-        <button class="btn-outline" style="flex:1;padding:14px;font-size:11px;border-radius:8px;border-color:#e85b5b;color:#e85b5b;">DECLINE</button>
-        <button class="btn-green" style="flex:1;padding:14px;font-size:11px;border-radius:8px;">ACCEPT ✓</button>
-      </div>
-    </div>`
-  }
-];
-
-
-const screenInfo = [
-  // 0: Splash
-  { journey: [], shows: ["Open Club logo and tagline", "Two CTAs: Explore the App and Log In", "No account needed — user can browse freely", "Sets the tone before any commitment"], tip: "User is NOT forced to sign up. They can explore the full app first." },
-  // 1: Home Browse
-  { journey: [["Open app", "Lands here automatically"], ["Tap any round card", "→ Round Detail page"], ["Tap 'Explore the Map' banner", "→ Discover Map tab"]], shows: ["Personalised greeting once logged in", "Filter pills: Sport, Location, Handicap", "Nearby rounds cards with club, date, spots", "Map explore banner linking to Discover tab", "Leaderboard preview strip"], tip: "This is Tab 1 — Find Rounds. The home base of the app." },
-  // 2: Map
-  { journey: [["Tap centre nav button (Discover)", "Opens this full-screen map"], ["See green pins = golf clubs nearby", "Number inside pin = active members"], ["Tap any pin", "→ Club Page (Screen 04)"]], shows: ["Full-screen dark map", "Golf club pins with member counts", "Header: Golf Clubs Near You + total count", "Toggle between Map view and List view"], tip: "This is the MAIN feature — the centre button in the nav. Lawrence specifically wants this to be the hero of the app." },
-  // 3: Club Page
-  { journey: [["Discover Map", "→"], ["Tap a green club pin", "→"], ["This page loads", "Club members shown"]], shows: ["Club name + location", "Member count badge (from sign-up data)", "Every Open Club user tagged to this club", "Name, handicap, star rating, distance, online dot", "INVITE button on each member row"], tip: "Members appear here because they selected this club during sign up. This is the data segmentation that powers the map feature." },
-  // 4: Player Profile
-  { journey: [["Club Page member row", "→ Tap name"], ["Find Players list", "→ Tap row"], ["Leaderboard", "→ Tap player"]], shows: ["Hero golf background with name overlay", "Handicap index (green) + star rating", "Stats: Distance · Years playing · Connections", "Club memberships as tags", "Bio text", "MESSAGE · INVITE TO PLAY · CONNECT buttons"], tip: "MESSAGE and INVITE buttons trigger the Sign Up Gate if user is browsing without an account." },
-  // 5: Leaderboard
-  { journey: [["Find Rounds home", "→ Tap leaderboard strip"], ["Full leaderboard loads", "All players ranked"]], shows: ["Filter: This week / Month / All time / My Club", "Top 3 podium display", "Full ranked list with handicap + rating", "Your own rank highlighted"], tip: "Browsable without an account — good for hooking users into signing up when they see their friends ranked." },
-  // 6: Sign Up Gate
-  { journey: [["Browse mode", "User taps MESSAGE, JOIN or INVITE"], ["This bottom sheet slides up", "Doesn't block the screen behind"]], shows: ["Bottom sheet overlay — blurred background stays visible", "Two CTAs: Create Free Account and Log In", "'Continue browsing' option at the bottom"], tip: "This is NOT a full-screen block. User can dismiss it and keep browsing. Reduces friction and abandonment." },
-  // 7: Sign Up
-  { journey: [["Sign Up Gate", "→ Tap Create Account"], ["Or from Splash Screen", "→ Tap Log In"]], shows: ["Email + password fields", "Sign in with Apple / Google options", "Link back to Log In if existing user"], tip: null },
-  // 8: Create Profile
-  { journey: [["Sign Up complete", "→ Auto-advances here"], ["Step 1 of 3", "Profile basics"]], shows: ["Profile photo upload", "Full name field", "Location (city/postcode)", "Short bio", "Progress indicator (3 dots)"], tip: null },
-  // 9: Golf Setup
-  { journey: [["Create Profile", "→ Tap NEXT"], ["Step 2 of 3", "Golf-specific data"]], shows: ["Official Handicap Index input", "Skill rating (1–4 stars self-select)", "Club membership multi-select dropdown (all UK clubs)", "'Not a member of any club' option", "Home club selection"], tip: "CRITICAL SCREEN — club membership selection here is what powers the map. User is assigned to each club in the backend and appears on that club's pin." },
-  // 10: Preferences
-  { journey: [["Golf Setup", "→ Tap NEXT"], ["Step 3 of 3", "Playing preferences"]], shows: ["Preferred days of the week", "Time slots: Morning / Afternoon / Evening", "Max travel distance slider"], tip: "This data is used to surface better-matched round recommendations on the home feed." },
-  // 11: Home Logged In
-  { journey: [["Onboarding complete", "→ Lands here"], ["Or return visit", "Auto-login"]], shows: ["Personalised 'Welcome, [Name]' greeting", "Notification bell icon", "Nearby rounds tailored to preferences", "Leaderboard strip"], tip: "Same layout as browse mode but personalised and fully unlocked." },
-  // 12: Round Detail
-  { journey: [["Find Rounds home", "→ Tap any round card"], ["Round Detail page", "Full info + join"]], shows: ["Club photo", "Date, tee time, format (Strokeplay/Stableford etc)", "Spots remaining counter", "Avatars of players already joined", "JOIN THIS ROUND button"], tip: null },
-  // 13: Find Players
-  { journey: [["Discover tab", "→ Toggle to List View"], ["Or from map", "→ Find Players button"]], shows: ["Filter pills: Sport, Location, Handicap", "Player list: avatar, name, rating, distance, status", "Online dot indicator", "Inline INVITE button"], tip: null },
-  // 14: My Profile
-  { journey: [["Tab 3 (right nav)", "→ Profile tab"], ["Always accessible", "from bottom nav"]], shows: ["Own photo, name, handicap, rating", "Stats: Rounds, Connections, Clubs", "Bio + club membership tags", "Recent connections list", "Inbox and Settings access"], tip: null },
-  // 15: Inbox
-  { journey: [["My Profile", "→ Tap inbox icon"], ["Or notification", "→ Direct to thread"]], shows: ["Search bar", "Conversation list: name, last message, timestamp, unread dot", "Invite notifications appear here too"], tip: null },
-  // 16: Message Thread
-  { journey: [["Inbox", "→ Tap conversation"], ["Player Profile", "→ Tap MESSAGE"]], shows: ["Chat bubbles (sent/received)", "Player name + online status in header", "Text input + send", "Quick 'Invite to Play' inline shortcut"], tip: null },
-  // 17: Edit Profile
-  { journey: [["My Profile", "→ Tap EDIT PROFILE"]], shows: ["Change photo", "Edit name, bio, location", "Update handicap index", "Add/remove club memberships"], tip: null },
-  // 18: Post-Round Review
-  { journey: [["Round marked complete", "→ 3 hours later"], ["Push notification sent", "→ Opens this screen"]], shows: ["Who you played with + where", "1–5 star rating", "Quick tags: Friendly, Good pace, Punctual etc (each shows how many others picked it)", "Optional written review", "Skip option"], tip: "Only players confirmed in the same round can review each other — prevents fake reviews. This builds the trust layer across the whole network." },
-  // 19: Profile + Reviews
-  { journey: [["Any player profile", "Scroll down past bio"]], shows: ["Aggregate star rating + total review count", "Individual review cards: reviewer name, stars, written review, tags", "Tag counts shown as badges (e.g. Friendly ×7)"], tip: "This is what makes Open Club self-policing. Bad actors get low ratings, people stop accepting their requests. Like Airbnb reviews but for golf." },
-  // 20: Join Request
-  { journey: [["Someone requests to join your round", "→ Push notification"], ["Tap notification", "→ This screen"]], shows: ["Requester's full profile: name, handicap, rating, stats", "Last 2 community reviews shown inline", "Their message to you", "ACCEPT and DECLINE buttons"], tip: "You can make an informed decision before accepting a stranger into your round. Reviews + stats all visible before you commit." }
 ];
 
 let current = 0;
