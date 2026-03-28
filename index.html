@@ -263,6 +263,7 @@ body{background:var(--bg);color:var(--white);font-family:'IBM Plex Mono',monospa
     <button class="screen-btn active" onclick="show(0)"><span class="sb-num">01</span><span class="sb-name">Splash Screen</span><span class="sb-dot dot-blue"></span></button>
     <button class="screen-btn" onclick="show(1)"><span class="sb-num">02</span><span class="sb-name">Home — Find Rounds</span><span class="sb-dot dot-green"></span></button>
     <button class="screen-btn" onclick="show(2)"><span class="sb-num">03</span><span class="sb-name">Discover — Map</span><span class="sb-dot dot-green"></span></button>
+    <button class="screen-btn" onclick="show(13)"><span class="sb-num">03b</span><span class="sb-name">Find Players (Map toggle)</span><span class="sb-dot dot-green"></span></button>
     <button class="screen-btn" onclick="show(3)"><span class="sb-num">04</span><span class="sb-name">Club Page (members)</span><span class="sb-dot dot-green"></span></button>
     <button class="screen-btn" onclick="show(4)"><span class="sb-num">05</span><span class="sb-name">Leaderboard</span><span class="sb-dot dot-green"></span></button>
     <button class="screen-btn" onclick="show(5)"><span class="sb-num">06</span><span class="sb-name">Player Profile</span><span class="sb-dot dot-green"></span></button>
@@ -277,7 +278,6 @@ body{background:var(--bg);color:var(--white);font-family:'IBM Plex Mono',monospa
     <div class="group-label">Logged In</div>
     <button class="screen-btn" onclick="show(11)"><span class="sb-num">12</span><span class="sb-name">Home (logged in)</span><span class="sb-dot dot-green"></span></button>
     <button class="screen-btn" onclick="show(12)"><span class="sb-num">13</span><span class="sb-name">Round Detail</span><span class="sb-dot dot-amber"></span></button>
-    <button class="screen-btn" onclick="show(13)"><span class="sb-num">14</span><span class="sb-name">Find Players</span><span class="sb-dot dot-green"></span></button>
     <button class="screen-btn" onclick="show(14)"><span class="sb-num">15</span><span class="sb-name">My Profile</span><span class="sb-dot dot-green"></span></button>
     <button class="screen-btn" onclick="show(15)"><span class="sb-num">16</span><span class="sb-name">Inbox (Messages tab)</span><span class="sb-dot dot-green"></span></button>
     <button class="screen-btn" onclick="show(16)"><span class="sb-num">16b</span><span class="sb-name">Game Notifications</span><span class="sb-dot dot-amber"></span></button>
@@ -469,6 +469,10 @@ const screens = [
         </div>
         <div class="map-header">
           <div class="status-bar" style="padding:4px 0 8px;"><span style="font-size:11px;color:#888;">‹</span><span style="margin-left:8px;font-size:13px;">📍</span><span style="margin-left:6px;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;">Golf Clubs Near You</span><span style="margin-left:auto;font-size:10px;color:var(--green);">12 clubs</span></div>
+          <div style="display:flex;background:#1a1a1a;border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:6px;">
+            <div style="flex:1;padding:8px 0;text-align:center;font-size:10px;color:#000;background:var(--green);font-weight:600;">🗺 Map</div>
+            <div style="flex:1;padding:8px 0;text-align:center;font-size:10px;color:#888;">👥 Find Players</div>
+          </div>
         </div><div style="position:absolute;top:16%;left:42%;display:flex;flex-direction:column;align-items:center;cursor:pointer;z-index:10;">
           <div style="width:26px;height:26px;background:var(--green);border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(184,242,106,0.5);opacity:1.0;">
             <span style="transform:rotate(45deg);font-size:8px;">⛳</span>
