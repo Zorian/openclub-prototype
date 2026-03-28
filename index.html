@@ -1444,7 +1444,11 @@ function show(i) {
   document.getElementById('phone-screen').innerHTML = screens[i].html;
   document.getElementById('screen-title').textContent = screens[i].title;
   document.getElementById('screen-desc').textContent = screens[i].desc;
-  document.querySelectorAll('.screen-btn').forEach((b,j) => b.classList.toggle('active', j===i));
+  document.querySelectorAll('.screen-btn').forEach((b) => {
+    const match = b.getAttribute('onclick') && b.getAttribute('onclick').match(/show\((\d+)\)/);
+    const btnIdx = match ? parseInt(match[1]) : -1;
+    b.classList.toggle('active', btnIdx === i);
+  });
   
   const info = screenInfo[i];
   if (!info) { document.getElementById('info-content').innerHTML = ''; return; }
