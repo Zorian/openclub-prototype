@@ -263,7 +263,7 @@ body{background:var(--bg);color:var(--white);font-family:'IBM Plex Mono',monospa
     <button class="screen-btn active" onclick="show(0)"><span class="sb-num">01</span><span class="sb-name">Splash Screen</span><span class="sb-dot dot-blue"></span></button>
     <button class="screen-btn" onclick="show(1)"><span class="sb-num">02</span><span class="sb-name">Home — Find Rounds</span><span class="sb-dot dot-green"></span></button>
     <button class="screen-btn" onclick="show(2)"><span class="sb-num">03</span><span class="sb-name">Discover — Map</span><span class="sb-dot dot-green"></span></button>
-    <button class="screen-btn" onclick="show(13)"><span class="sb-num">03b</span><span class="sb-name">Find Players (Map toggle)</span><span class="sb-dot dot-green"></span></button>
+    <button class="screen-btn" onclick="show(14)"><span class="sb-num">03b</span><span class="sb-name">Find Players (Map toggle)</span><span class="sb-dot dot-green"></span></button>
     <button class="screen-btn" onclick="show(3)"><span class="sb-num">04</span><span class="sb-name">Club Page (members)</span><span class="sb-dot dot-green"></span></button>
     <button class="screen-btn" onclick="show(4)"><span class="sb-num">05</span><span class="sb-name">Leaderboard</span><span class="sb-dot dot-green"></span></button>
     <button class="screen-btn" onclick="show(5)"><span class="sb-num">06</span><span class="sb-name">Player Profile</span><span class="sb-dot dot-green"></span></button>
@@ -278,15 +278,16 @@ body{background:var(--bg);color:var(--white);font-family:'IBM Plex Mono',monospa
     <div class="group-label">Logged In</div>
     <button class="screen-btn" onclick="show(11)"><span class="sb-num">12</span><span class="sb-name">Home (logged in)</span><span class="sb-dot dot-green"></span></button>
     <button class="screen-btn" onclick="show(12)"><span class="sb-num">13</span><span class="sb-name">Round Detail</span><span class="sb-dot dot-amber"></span></button>
-    <button class="screen-btn" onclick="show(14)"><span class="sb-num">15</span><span class="sb-name">My Profile</span><span class="sb-dot dot-green"></span></button>
-    <button class="screen-btn" onclick="show(15)"><span class="sb-num">16</span><span class="sb-name">Inbox (Messages tab)</span><span class="sb-dot dot-green"></span></button>
-    <button class="screen-btn" onclick="show(16)"><span class="sb-num">16b</span><span class="sb-name">Game Notifications</span><span class="sb-dot dot-amber"></span></button>
-    <button class="screen-btn" onclick="show(17)"><span class="sb-num">17</span><span class="sb-name">Message Thread</span><span class="sb-dot dot-green"></span></button>
-    <button class="screen-btn" onclick="show(18)"><span class="sb-num">18</span><span class="sb-name">Edit Profile</span><span class="sb-dot dot-amber"></span></button>
+    <button class="screen-btn" onclick="show(13)"><span class="sb-num">13b</span><span class="sb-name">Match Chat (Group)</span><span class="sb-dot dot-green"></span></button>
+    <button class="screen-btn" onclick="show(15)"><span class="sb-num">15</span><span class="sb-name">My Profile</span><span class="sb-dot dot-green"></span></button>
+    <button class="screen-btn" onclick="show(16)"><span class="sb-num">16</span><span class="sb-name">Inbox (Messages tab)</span><span class="sb-dot dot-green"></span></button>
+    <button class="screen-btn" onclick="show(17)"><span class="sb-num">16b</span><span class="sb-name">Game Notifications</span><span class="sb-dot dot-amber"></span></button>
+    <button class="screen-btn" onclick="show(18)"><span class="sb-num">17</span><span class="sb-name">Message Thread</span><span class="sb-dot dot-green"></span></button>
+    <button class="screen-btn" onclick="show(19)"><span class="sb-num">18</span><span class="sb-name">Edit Profile</span><span class="sb-dot dot-amber"></span></button>
 
     <div class="group-label">Reviews System</div>
-    <button class="screen-btn" onclick="show(19)"><span class="sb-num">19</span><span class="sb-name">Post-Round Review</span><span class="sb-dot dot-amber"></span></button>
-    <button class="screen-btn" onclick="show(20)"><span class="sb-num">20</span><span class="sb-name">Profile + Reviews</span><span class="sb-dot dot-green"></span></button>
+    <button class="screen-btn" onclick="show(20)"><span class="sb-num">19</span><span class="sb-name">Post-Round Review</span><span class="sb-dot dot-amber"></span></button>
+    <button class="screen-btn" onclick="show(21)"><span class="sb-num">20</span><span class="sb-name">Profile + Reviews</span><span class="sb-dot dot-green"></span></button>
 
 
   </div>
@@ -977,6 +978,64 @@ const screens = [
       </div>
     </div>`
   },
+  ,
+  // 12b: GROUP MATCH CHAT
+  {
+    title: "Match Chat — Group",
+    desc: "Tap 'Chat with players' on Round Detail · group chat with everyone in the round",
+    html: `<div class="app" style="display:flex;flex-direction:column;height:100%;background:#0d0d0d;">
+      <div class="status-bar"><span class="status-time">9:41</span><div class="status-icons">▌▌▌ ▾ ▮</div></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid var(--border);">
+        <span style="font-size:18px;opacity:0.7;">‹</span>
+        <div style="text-align:center;">
+          <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;">Match Chat</div>
+          <div style="font-size:9px;color:#888;margin-top:1px;">Pinehill Golf Club · Sat 5 Apr</div>
+        </div>
+        <span style="font-size:16px;opacity:0.6;">⋯</span>
+      </div>
+      <div style="background:#141f0a;border-bottom:1px solid rgba(184,242,106,0.15);padding:10px 16px;display:flex;justify-content:space-between;align-items:center;">
+        <div style="font-size:10px;color:#888;line-height:1.5;">This is a group chat for your round. All players can see messages.</div>
+        <div style="font-size:10px;color:var(--green);white-space:nowrap;margin-left:10px;">Details ›</div>
+      </div>
+      <div style="flex:1;overflow-y:auto;padding:16px;">
+        <div style="text-align:center;margin-bottom:16px;">
+          <div style="display:inline-block;background:#1a1a1a;border:1px solid var(--border);border-radius:20px;padding:5px 14px;font-size:9px;color:#555;">Saturday 5 April · Pinehill Golf Club</div>
+        </div>
+        <div style="text-align:center;margin-bottom:12px;font-size:9px;color:#444;">Jason M. · HI 1.08 · has entered the chat</div>
+        <div style="text-align:center;margin-bottom:12px;font-size:9px;color:#444;">Sarah K. · HI 8.4 · has entered the chat</div>
+        <div style="text-align:center;margin-bottom:16px;font-size:9px;color:#444;">You · HI 12.4 · has entered the chat</div>
+        <div style="display:flex;gap:10px;margin-bottom:12px;">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" style="width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0;margin-top:2px;" />
+          <div>
+            <div style="font-size:9px;color:var(--mid);margin-bottom:4px;">Jason M.</div>
+            <div style="background:#1e1e1e;border-radius:4px 16px 16px 16px;padding:10px 14px;font-size:11px;color:var(--white);line-height:1.5;max-width:220px;">Hey guys, everyone still good for Saturday? Tee time is 08:30 sharp ⛳</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;margin-bottom:12px;">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" style="width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0;margin-top:2px;" />
+          <div>
+            <div style="font-size:9px;color:var(--mid);margin-bottom:4px;">Sarah K.</div>
+            <div style="background:#1e1e1e;border-radius:4px 16px 16px 16px;padding:10px 14px;font-size:11px;color:var(--white);line-height:1.5;max-width:220px;">I'll be there 👍 Looking forward to it</div>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:flex-end;margin-bottom:12px;">
+          <div style="background:var(--green);border-radius:16px 4px 16px 16px;padding:10px 14px;font-size:11px;color:#000;line-height:1.5;max-width:220px;">See you both there! I'll be parking at the main car park</div>
+        </div>
+        <div style="display:flex;gap:10px;margin-bottom:12px;">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" style="width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0;margin-top:2px;" />
+          <div>
+            <div style="font-size:9px;color:var(--mid);margin-bottom:4px;">Jason M.</div>
+            <div style="background:#1e1e1e;border-radius:4px 16px 16px 16px;padding:10px 14px;font-size:11px;color:var(--white);line-height:1.5;max-width:220px;">Perfect 🏌 See you Saturday</div>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid var(--border);padding:10px 14px;display:flex;gap:10px;align-items:center;background:#0d0d0d;">
+        <div style="font-size:20px;color:#555;cursor:pointer;">+</div>
+        <div style="flex:1;background:#1a1a1a;border:1px solid var(--border);border-radius:20px;padding:10px 14px;font-size:11px;color:#555;">Write a message...</div>
+        <div style="width:36px;height:36px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;">↑</div>
+      </div>
+    </div>`
+  }
   // 13: FIND PLAYERS
   {
     title: "Find Players — List View",
